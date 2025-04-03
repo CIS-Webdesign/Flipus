@@ -1,8 +1,17 @@
+/*!
+ * Flipus - v0.1.0
+ * coded by CIS-Webdesign
+ * https://codespielwiese.net
+ * GitHub: https://github.com/CIS-Webdesign/Flipus
+ * Licensed under the MIT License
+ * https://opensource.org/licenses/MIT
+ */
+
 function initPicCollageHover(containerSelector) {
   let isScriptActive = false;
 
   function enableHoverEffects(container) {
-    const images = container.querySelectorAll("img");
+    const images = container.querySelectorAll("div");
 
     images.forEach((img, index) => {
       img.addEventListener("mouseenter", function onMouseEnter() {
@@ -21,6 +30,7 @@ function initPicCollageHover(containerSelector) {
             el.style.transform = "scale(1.3)";
             el.style.zIndex = "10";
             el.style.transition = "transform 0.3s ease-in-out";
+            el.style.border = "1px solid #eee";
           }
         });
       });
@@ -29,6 +39,7 @@ function initPicCollageHover(containerSelector) {
         images.forEach((el) => {
           el.style.transform = "scale(1)";
           el.style.opacity = "1";
+          el.style.border = "0px";
         });
       });
 
@@ -39,7 +50,7 @@ function initPicCollageHover(containerSelector) {
   }
 
   function disableHoverEffects(container) {
-    const images = container.querySelectorAll("img");
+    const images = container.querySelectorAll("div");
 
     images.forEach((el) => {
       el.style.transform = "scale(1)";
@@ -59,9 +70,9 @@ function initPicCollageHover(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
 
-    if (window.innerWidth < 900 && isScriptActive) {
+    if (window.innerWidth < 1024 && isScriptActive) {
       disableHoverEffects(container);
-    } else if (window.innerWidth >= 900 && !isScriptActive) {
+    } else if (window.innerWidth >= 1024 && !isScriptActive) {
       enableHoverEffects(container);
     }
   }

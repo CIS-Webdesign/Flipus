@@ -1,0 +1,115 @@
+/*!
+ * Flipus - v0.1.0
+ * coded by CIS-Webdesign
+ * https://codespielwiese.net
+ * GitHub: https://github.com/CIS-Webdesign/Flipus
+ * Licensed under the MIT License
+ * https://opensource.org/licenses/MIT
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: antiquewhite;
+}
+
+body {
+  background: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 10px 0 0 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: orange;
+}
+
+p {
+  font-size: 14px;
+}
+
+span {
+  font-size: 15px;
+  margin: 50px 0 10px 0;
+}
+
+.version {
+  margin: 10px 0 50px 0;
+}
+
+/* Flipus */
+
+#flipus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 90%;
+  text-align: center;
+}
+
+.flipus-container {
+  position: relative;
+  width: calc(100% / 6 - 10px);
+  max-width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.flipus-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.flipus-container span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  transition: transform 0.5s ease-in-out 0.2s;
+  transform: translateY(110%);
+  display: block;
+}
+
+.flipus-container:hover span {
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  #flipus div {
+    width: calc(100% / 3 - 10px);
+  }
+  .flipus-container span {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  #flipus div {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  #flipus div {
+    width: 100%;
+  }
+}
