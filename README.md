@@ -14,16 +14,17 @@ Binde einfach die folgenden CDN-Links in dein HTML-Projekt ein:
 
 ```html
 <!-- CSS einbinden -->
-<link rel="stylesheet" href="https://cdn.codespielwiese.net/script/flipus/v0.1.0/flipus.min.css">
+<link rel="stylesheet" href="https://cdn.codespielwiese.net/script/flipus/v0.1.0/flipus.min.css" />
 
 <!-- JavaScript einbinden -->
 <script src="https://cdn.codespielwiese.net/script/flipus/v0.1.0/flipus.min.js"></script>
 ```
+
 Führe anschließend folgenden JavaScript-Aufruf aus, um die Galerie zu aktivieren:
 
 ```html
 <script>
-  initPicCollageHover("#flipus");
+  initFlipus("#flipus");
 </script>
 ```
 
@@ -41,8 +42,8 @@ Strukturiere deine Galerie-Elemente wie folgt:
     <span>
       <h2>Benny</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-        illum possimus vel aut placeat nihil ex nostrum voluptatibus quas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam illum
+        possimus vel aut placeat nihil ex nostrum voluptatibus quas.
       </p>
     </span>
   </div>
@@ -51,6 +52,7 @@ Strukturiere deine Galerie-Elemente wie folgt:
 
 </div>
 ```
+
 ## 🌐 Demo
 
 Schau dir die Demo der Galerie in Aktion an: [Flipus Demo](https://flipus.codespielwiese.net/)

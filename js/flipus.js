@@ -7,7 +7,7 @@
  * https://opensource.org/licenses/MIT
  */
 
-function initPicCollageHover(containerSelector) {
+function initFlipus(containerSelector) {
   let isScriptActive = false;
 
   function enableHoverEffects(container) {
